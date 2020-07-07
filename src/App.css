@@ -1,12 +1,5 @@
-nav {
-  background-color: rgb(223, 194, 250);
-  padding: 10px;
-}
-
-nav > a {
-  padding: 10px;
-  color: blue;
-  text-decoration: none;
+a {
+  color: black;
 }
 
 img {
