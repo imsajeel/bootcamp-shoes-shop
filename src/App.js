@@ -82,7 +82,7 @@ function LaunchShoe() {
       <br />
       <h1>More Images</h1>
       {images.map((url, index) => (
-        <img src={url} alt={name + index} />
+        <img src={url} alt={name + index} key={index} />
       ))}
     </div>
   );
