@@ -11,9 +11,11 @@ import { CartProvider } from "./Components/CartContext";
 const engine = new Styletron();
 
 const Centered = styled("div", {
+  position: "reletive",
   margin: "auto",
   with: "90%",
   maxWidth: "900px",
+  // overflow: "hidden",
   // display: "flex",
   // justifyContent: "center",
   // alignItems: "center",

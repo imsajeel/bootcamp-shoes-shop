@@ -1,6 +1,15 @@
 a {
   color: black;
 }
+
+.homeSlider {
+  position: relative;
+  width: 100%;
+  max-width: 900px;
+  margin: auto;
+  height: 400px;
+}
+
 .cardImageBox {
   position: relative;
   border: 1px solid lightgrey;
@@ -103,4 +112,13 @@ footer > a {
 
 .pageDiv {
   min-height: calc(100vh - 227px);
+}
+
+@media only screen and (max-width: 450px) {
+  .topNav {
+    transform: scale(0.7);
+  }
+  .homeSlider {
+    height: 250px;
+  }
 }
