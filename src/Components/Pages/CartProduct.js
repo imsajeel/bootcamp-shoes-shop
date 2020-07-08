@@ -4,8 +4,8 @@ import { Link } from "react-router-dom";
 
 export default ({ data, index }) => {
   const [cart, setCart] = useContext(CartContext);
-  const removeProd = (index) => {
-    setCart(cart.slice(index));
+  const removeProd = (i) => {
+    setCart(cart.filter((item) => item.id !== i));
   };
 
   if (data.name) {
@@ -23,7 +23,7 @@ export default ({ data, index }) => {
         </td>
         <td>{price}</td>
         <td width="20px">
-          <button className="removeBt" onClick={() => removeProd(index)}>
+          <button className="removeBt" onClick={() => removeProd(id)}>
             x
           </button>
         </td>

@@ -17,15 +17,17 @@ export default function MyAppRoute() {
     <Router>
       <TopNav />
       <Cart />
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="products" element={<AllProducts />}>
-          <Route path="/" element={<ProductIndex />} />
-          <Route path=":id" element={<Product />} />
-        </Route>
-        <Route path="/cart" element={<CartPage />} />
-        <Route path="*" element={<NotFound />} />
-      </Routes>
+      <div className="pageDiv">
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="products" element={<AllProducts />}>
+            <Route path="/" element={<ProductIndex />} />
+            <Route path=":id" element={<Product />} />
+          </Route>
+          <Route path="/cart" element={<CartPage />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </div>
       <Footer />
     </Router>
   );
