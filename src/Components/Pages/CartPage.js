@@ -1,4 +1,7 @@
 import React, { useContext } from "react";
+import { StyledAction } from "baseui/card";
+import { Button } from "baseui/button";
+
 import { CartContext } from "../CartContext";
 
 import CartProduct from "./CartProduct";
@@ -48,6 +51,24 @@ export default function CartPage() {
       <h3 style={{ textAlign: "right" }}>
         Total Price: {"$" + totalPrice} &emsp;
       </h3>
+
+      <br />
+      <br />
+      <StyledAction style={{ display: "flex" }}>
+        <div style={{ flex: "1" }}></div>
+        <Button
+          overrides={{
+            BaseButton: { style: { width: "150px", marginRight: "20px" } },
+          }}
+          onClick={() =>
+            alert(
+              "Sorry! Somthing went wrong. You can't checkout at the movement."
+            )
+          }
+        >
+          {"Checkout  >"}
+        </Button>
+      </StyledAction>
     </div>
   );
 }
