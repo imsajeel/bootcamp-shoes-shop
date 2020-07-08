@@ -8,7 +8,6 @@ import AllProducts, {
   ProductIndex,
   Product,
 } from "./Components/Pages/AllProducts";
-import Launch, { LaunchIndex, LaunchShoe } from "./Components/Pages/Launch";
 import NotFound from "./Components/Pages/NotFound";
 
 export default function MyAppRoute() {
@@ -17,10 +16,6 @@ export default function MyAppRoute() {
       <TopNav />
       <Routes>
         <Route path="/" element={<Home />} />
-        <Route path="launch" element={<Launch />}>
-          <Route path="/" element={<LaunchIndex />} />
-          <Route path=":id" element={<LaunchShoe />} />
-        </Route>
         <Route path="products" element={<AllProducts />}>
           <Route path="/" element={<ProductIndex />} />
           <Route path=":id" element={<Product />} />
