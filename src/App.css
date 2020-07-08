@@ -73,6 +73,7 @@ footer > a {
 .myFlex {
   display: flex;
   width: 100%;
+  flex-wrap: wrap;
 }
 
 .prodImages {
@@ -81,7 +82,8 @@ footer > a {
 }
 
 .prodInfo {
-  margin: 0px 3%;
+  width: 400px;
+  margin: 0px auto;
 }
 
 .tableCart {
@@ -115,9 +117,18 @@ footer > a {
   min-height: calc(100vh - 227px);
 }
 
+.bigImage {
+  width: 90%;
+}
+
+@media only screen and (max-width: 700px) {
+  .flexAutoMargin {
+    margin: auto;
+  }
+}
 @media only screen and (max-width: 450px) {
   .topNav {
-    transform: scale(0.7);
+    transform: scale(0.6);
   }
   .homeSlider {
     height: 250px;

@@ -31,8 +31,10 @@ export default function ProductPage() {
   return (
     <div className="productPage">
       <div className="myFlex">
-        <div className="prodImages">
-          <MySlider urls={images} />
+        <div className="flexAutoMargin">
+          <div className="prodImages">
+            <MySlider urls={images} />
+          </div>
         </div>
 
         <div className="prodInfo">
@@ -57,7 +59,12 @@ export default function ProductPage() {
         <h1>More Images</h1>
 
         {images.map((url, index) => (
-          <img src={url} alt={url + index} width="500pxpx" />
+          <img
+            src={url}
+            alt={url + index}
+            width="500pxpx"
+            className="bigImage"
+          />
         ))}
       </div>
     </div>
