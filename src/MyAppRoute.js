@@ -10,6 +10,7 @@ import AllProducts, {
 } from "./Components/Pages/AllProducts";
 import NotFound from "./Components/Pages/NotFound";
 import Cart from "./Components/Cart";
+import CartPage from "./Components/Pages/CartPage";
 
 export default function MyAppRoute() {
   return (
@@ -22,6 +23,7 @@ export default function MyAppRoute() {
           <Route path="/" element={<ProductIndex />} />
           <Route path=":id" element={<Product />} />
         </Route>
+        <Route path="/cart" element={<CartPage />} />
         <Route path="*" element={<NotFound />} />
       </Routes>
       <Footer />

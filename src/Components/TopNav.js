@@ -33,10 +33,12 @@ const TopNav = () => {
       </StyledNavigationList>
       <StyledNavigationList $align={ALIGN.right}>
         <StyledNavigationItem>
-          <Button>
-            <ChevronDown />
-            &emsp; Cart
-          </Button>
+          <Link to="/cart">
+            <Button>
+              <ChevronDown />
+              &emsp; Cart
+            </Button>
+          </Link>
         </StyledNavigationItem>
       </StyledNavigationList>
     </HeaderNavigation>
