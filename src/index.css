@@ -22,34 +22,3 @@ td {
   border: 1px solid lightgray;
   text-align: center;
 }
-
-.tableCart {
-  width: 100%;
-}
-
-.removeBt {
-  background-color: black;
-  color: white;
-  border-radius: 20px;
-  width: 20px;
-  height: 20px;
-  border: none;
-  cursor: pointer;
-  transition: all 0.3s;
-}
-
-.removeBt:hover {
-  transform: scale(1.1);
-}
-
-.removeBt:active {
-  transform: scale(0.9);
-}
-
-.removeBt:focus {
-  outline: none;
-}
-
-.pageDiv {
-  min-height: calc(100vh - 227px);
-}

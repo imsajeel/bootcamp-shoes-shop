@@ -14,15 +14,15 @@ const MyCard = ({ id, name, price, url }) => {
 
   return (
     <div className="myCard">
-      <Card key={id} style={{ width: "250px", height: "400px" }}>
+      <Card key={id} style={{ width: "250px", height: "420px" }}>
         <Link to={`/products/${id}`} style={{ textDecoration: "none" }}>
           <StyledBody style={{ textAlign: "center" }}>
-            <img
-              src={url}
-              alt="productname"
-              style={{ border: "1px solid lightgrey", borderRadius: "10px" }}
-            />
+            <div className="cardImageBox">
+              <img src={url} alt={name} />
+              <label>{price}</label>
+            </div>
             <br />
+
             <b>{name}</b>
           </StyledBody>
         </Link>
