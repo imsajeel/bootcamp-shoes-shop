@@ -27,7 +27,7 @@ const TopNav = () => {
         </StyledNavigationItem>
         <StyledNavigationItem>
           <StyledLink>
-            <Link to="/launch">Launch</Link>
+            <Link to="/products">Products</Link>
           </StyledLink>
         </StyledNavigationItem>
       </StyledNavigationList>
