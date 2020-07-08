@@ -6,9 +6,50 @@ a {
   width: 200px;
 }
 
+.myCard {
+  margin: auto;
+  margin-top: 20px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+
+.myCard:hover {
+  transform: scale(1.03);
+}
+
+.myCard:active {
+  transform: scale(0.97);
+}
+
 .centeredForced {
   display: flex;
   align-items: center;
   padding: 20vh;
   justify-content: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+  text-align: center;
+  margin-top: 50px;
+  padding: 10px;
+}
+
+footer > a {
+  color: white;
+}
+
+.myFlex {
+  display: flex;
+  width: 100%;
+}
+
+.prodImages {
+  max-width: 300px;
+  border: 1px solid lightgray;
+}
+
+.prodInfo {
+  margin: 0px 3%;
 }
