@@ -14,7 +14,7 @@ export default ({ data, index }) => {
       <tr key={id}>
         <td>{index + 1}</td>
         <td width="100px">
-          <img src={url} name={name} width="100px" height="100px" />
+          <img src={url} alt={name} width="100px" height="100px" />
         </td>
         <td>
           <b>

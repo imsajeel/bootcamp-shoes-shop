@@ -4,7 +4,7 @@ import { CartContext } from "../CartContext";
 import CartProduct from "./CartProduct";
 
 export default function CartPage() {
-  const [cart, setCart] = useContext(CartContext);
+  const [cart] = useContext(CartContext);
 
   return (
     <div>
