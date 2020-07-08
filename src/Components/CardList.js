@@ -19,6 +19,7 @@ export default function CardList() {
             key={prod.id}
             id={prod.id}
             name={prod.name}
+            price={prod.price}
             url={prod.images[0]}
           />
         ))}

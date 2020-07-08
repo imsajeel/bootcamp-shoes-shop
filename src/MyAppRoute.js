@@ -9,11 +9,13 @@ import AllProducts, {
   Product,
 } from "./Components/Pages/AllProducts";
 import NotFound from "./Components/Pages/NotFound";
+import Cart from "./Components/Cart";
 
 export default function MyAppRoute() {
   return (
     <Router>
       <TopNav />
+      <Cart />
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="products" element={<AllProducts />}>

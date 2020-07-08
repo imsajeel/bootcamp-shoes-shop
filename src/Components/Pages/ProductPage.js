@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useContext } from "react";
 import { useParams } from "react-router-dom";
 import { Button } from "baseui/button";
 import { StyledAction } from "baseui/card";
@@ -7,7 +7,11 @@ import SimpleImageSlider from "react-simple-image-slider";
 
 import products from "../../database/products";
 
+import { CartContext } from "../CartContext";
+
 export default function ProductPage() {
+  const [cart, setCart] = useContext(CartContext);
+
   const { id } = useParams();
   const result = products.filter((prod) => prod.id.includes(id));
   if (!result[0]) {
@@ -18,6 +22,12 @@ export default function ProductPage() {
     );
   }
   const { name, category, price, description, images } = result[0];
+
+  const addToCart = () => {
+    const shoes = { id, name, price, url: images };
+    setCart([...cart, shoes]);
+  };
+
   return (
     <div className="productPage">
       <div className="myFlex">
@@ -36,16 +46,7 @@ export default function ProductPage() {
               overrides={{
                 BaseButton: { style: { width: "100%" } },
               }}
-              onClick={() => console.log("Hello Wishlist")}
-            >
-              Buy Now
-            </Button>
-            &nbsp;
-            <Button
-              overrides={{
-                BaseButton: { style: { width: "100%" } },
-              }}
-              onClick={() => console.log("Hello Cart")}
+              onClick={addToCart}
             >
               Add to Cart
             </Button>

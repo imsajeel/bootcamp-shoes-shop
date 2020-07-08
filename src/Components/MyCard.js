@@ -1,9 +1,17 @@
-import * as React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
 import { Card, StyledBody, StyledAction } from "baseui/card";
 import { Button } from "baseui/button";
 
-const MyCard = ({ id, name, url }) => {
+import { CartContext } from "./CartContext";
+
+const MyCard = ({ id, name, price, url }) => {
+  const [cart, setCart] = useContext(CartContext);
+  const addToCart = () => {
+    const shoes = { id, name, price, url };
+    setCart([...cart, shoes]);
+  };
+
   return (
     <div className="myCard">
       <Card key={id} style={{ width: "250px", height: "400px" }}>
@@ -23,7 +31,7 @@ const MyCard = ({ id, name, url }) => {
             overrides={{
               BaseButton: { style: { width: "100%" } },
             }}
-            onClick={() => console.log("Hello Cart")}
+            onClick={addToCart}
           >
             Add to Cart
           </Button>

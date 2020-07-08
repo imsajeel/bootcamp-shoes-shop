@@ -6,6 +6,7 @@ import { Client as Styletron } from "styletron-engine-atomic";
 import { Provider as StyletronProvider } from "styletron-react";
 import { LightTheme, BaseProvider, styled } from "baseui";
 import MyAppRoute from "./MyAppRoute";
+import { CartProvider } from "./Components/CartContext";
 
 const engine = new Styletron();
 
@@ -21,13 +22,15 @@ const Centered = styled("div", {
 
 function App() {
   return (
-    <StyletronProvider value={engine}>
-      <BaseProvider theme={LightTheme}>
-        <Centered>
-          <MyAppRoute />
-        </Centered>
-      </BaseProvider>
-    </StyletronProvider>
+    <CartProvider>
+      <StyletronProvider value={engine}>
+        <BaseProvider theme={LightTheme}>
+          <Centered>
+            <MyAppRoute />
+          </Centered>
+        </BaseProvider>
+      </StyletronProvider>
+    </CartProvider>
   );
 }
 
